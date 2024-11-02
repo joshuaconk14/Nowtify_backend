@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, render_template
 from flask_cors import CORS
 
 app = Flask(__name__) # create app instance / representation
@@ -12,7 +12,7 @@ CORS(app)
 # login route and defining home page
 @app.route("/home")
 def home():
-    return jsonify("Welcome to Nowtify!")
+    return render_template('home.html')
 
 
 
